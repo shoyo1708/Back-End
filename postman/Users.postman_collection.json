@@ -1,0 +1,121 @@
+{
+  "info": {
+    "_postman_id": "8cf4c67a-2a24-4f39-bc35-c68949234ba0",
+    "name": "User Authentication",
+    "description": "Authentication endpoints for User Register, Login, and Logout.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"prince_kumar\",\n  \"email\": \"princekumar@example.com\",\n  \"password\": \"SecurePass123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "register"
+          ]
+        },
+        "description": "Registers a new user with username, email, and password. Password is automatically hashed with bcrypt."
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"princekumar@example.com\",\n  \"password\": \"SecurePass123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "login"
+          ]
+        },
+        "description": "Validates user credentials by comparing password hash with bcrypt."
+      },
+      "response": []
+    },
+    {
+      "name": "Logout User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"princekumar@example.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/users/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "logout"
+          ]
+        },
+        "description": "Confirms user exists and logs them out."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "info": {
+    "_postman_id": "12fb2797-2e3a-4116-92e6-a931ecf2c919",
+    "name": "Post CRUD Operations",
+    "description": "CRUD API endpoints for creating, reading, updating, and deleting character posts.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Kina\",\n  \"description\": \"A skilled martial artist\",\n  \"age\": 26\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "create"
+          ]
+        },
+        "description": "Creates a new character post and returns status 201 Created with the saved post object including its MongoDB _id."
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/getPosts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "getPosts"
+          ]
+        },
+        "description": "Fetches all character posts stored in MongoDB."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Post",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Kina Master\",\n  \"description\": \"A legendary grandmaster martial artist\",\n  \"age\": 28\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/update/REPLACE_WITH_POST_ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "update",
+            "REPLACE_WITH_POST_ID"
+          ]
+        },
+        "description": "Partially updates a character post by ID using HTTP PATCH. Replace REPLACE_WITH_POST_ID with the _id obtained from Create Post."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Post",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/delete/REPLACE_WITH_POST_ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "delete",
+            "REPLACE_WITH_POST_ID"
+          ]
+        },
+        "description": "Deletes a character post by ID using HTTP DELETE. Replace REPLACE_WITH_POST_ID with the _id obtained from Create Post."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "backend-express-api",
+  "version": "1.0.0",
+  "description": "Introductory backend REST API with Express, Node.js, and MongoDB",
+  "license": "ISC",
+  "author": "Prince Kumar",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4",
+    "nodemon": "^3.1.14"
+  }
+}
